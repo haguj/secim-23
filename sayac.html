@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mobil Uyumlu Sayfa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-      
-      * {
-        box-sizing: border-box;
-      }
-      
-      body {
-        background-image: url("https://cdn.shopify.com/s/files/1/0613/0437/3481/articles/cherry_blossom_c5d3d62f-5e25-4881-bc79-cefac73231e1_800x.jpg?v=1677490873");
-        background-repeat: repeat;
-        background-size: cover;
-        background-position: center;
-        font-family: Gotham Bold, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .background-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
-        z-index: -1;
-      }
-      
-      .header {
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 12px;
-        margin-top: 30px;
-      }
+    <head>
+        <title>Mobil Uyumlu Sayfa</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 50vh;
-        text-align: center; 
-        margin-bottom: 30px;
-      }
-      
-      
-       .section {
-         margin-bottom: 20px;
-      }
-      
-      .counter {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      
-      .inbutton { padding: 10px 20px; font-size: 16px; background-color: #3498db; color: #fff; border: none; border-radius: 4px; cursor: pointer; } .debutton { padding: 10px 20px; font-size: 16px; background-color: #3498db; color: #fff; border: none; border-radius: 4px; cursor: pointer; justify-content: left; } .total { margin-top: 20px; } @media only screen and (max-width: 768px) { .container { height: auto; } } @media only screen and (max-width: 480px) { .header { font-size: 18px; } .counter { font-size: 24px; } .inbutton, .debutton { font-size: 14px; } } </style> </head> <body> <div class="background-overlay"></div> <div class="header"> <h1>İKİNCİ TUR SEÇİM SAYACI '23</h1> </div> <div class="container"> <div class="section"> <h2>Kemal Kılıçdaroğlu</h2> <div class="counter" id="rteCounter">0</div> <button class="debutton" onclick="decreaseCounter('rteCounter')"><i class="fas fa-undo"></i></button> <button class="inbutton" onclick="increaseCounter('rteCounter')">Artır</button> </div>
+            body {
+                background-image: url("https://cdn.shopify.com/s/files/1/0613/0437/3481/articles/cherry_blossom_c5d3d62f-5e25-4881-bc79-cefac73231e1_800x.jpg?v=1677490873");
+                background-repeat: repeat;
+                background-size: cover;
+                background-position: center;
+                font-family: Gotham Bold, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .background-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.7);
+                z-index: -1;
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 20px;
+                margin-top: 30px;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 50vh;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .counter {
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .inbutton,
+            .debutton {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #3498db;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .total {
+                margin-top: 20px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .header {
+                    font-size: 16px;
+                }
+
+                .counter {
+                    font-size: 28px;
+                }
+
+                .inbutton,
+                .debutton {
+                    font-size: 14px;
+                }
+            }
+
+            @media only screen and (max-width: 480px) {
+                .header {
+                    font-size: 14px;
+                }
+
+                .counter {
+                    font-size: 24px;
+                }
+
+                .inbutton,
+                .debutton {
+                    font-size: 12px;
+                }
+            }
+        </style>
+    </head>
+  
+  <body> <div class="background-overlay"></div> <div class="header"> <h1>İKİNCİ TUR SEÇİM SAYACI '23</h1> </div> <div class="container"> <div class="section"> <h2>Kemal Kılıçdaroğlu</h2> <div class="counter" id="rteCounter">0</div> <button class="debutton" onclick="decreaseCounter('rteCounter')"><i class="fas fa-undo"></i></button> <button class="inbutton" onclick="increaseCounter('rteCounter')">Artır</button> </div>
 
 <div class="section"> <h2>R. Tayyip Erdoğan</h2> <div class="counter" id="kkCounter">0</div> <button class="debutton" onclick="decreaseCounter('kkCounter')"><i class="fas fa-undo"></i></button> <button class="inbutton" onclick="increaseCounter('kkCounter')">Artır</button> </div> </div> <div class="total"> <h2>Toplam Geçerli Oy: <span id="totalVotes">0</span></h2> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <script> function increaseCounter(counterId) { var counterElement = document.getElementById(counterId); var currentValue = parseInt(counterElement.innerHTML); counterElement.innerHTML = currentValue + 1; updateTotalVotes(); } function decreaseCounter(counterId) { var counterElement = document.getElementById(counterId); var currentValue = parseInt(counterElement.innerHTML); if (currentValue > 0) { counterElement.innerHTML = currentValue - 1; updateTotalVotes(); } } function updateTotalVotes() { var rteCounterValue = parseInt(document.getElementById('rteCounter').innerHTML); var kkCounterValue = parseInt(document.getElementById('kkCounter').innerHTML); var totalVotesElement = document.getElementById('totalVotes'); totalVotesElement.innerHTML = rteCounterValue + kkCounterValue; } </script> </body> 
 
